@@ -1,0 +1,39 @@
+import prisma from '@/lib/prisma';
+
+export async function getCourses() {
+    try {
+        return await prisma.course.findMany({
+            where: { published: true },
+            include: {
+                modules: {
+                    orderBy: { order: 'asc' }
+                }
+            },
+            orderBy: { createdAt: 'desc' }
+        });
+    } catch (error) {
+        console.error('Error fetching courses:', error);
+        return [];
+    }
+}
+
+export async function getCourse(id: string) {
+    try {
+        return await prisma.course.findUnique({
+            where: { id },
+            include: {
+                modules: {
+                    include: {
+                        lessons: {
+                            orderBy: { order: 'asc' }
+                        }
+                    },
+                    orderBy: { order: 'asc' }
+                }
+            }
+        });
+    } catch (error) {
+        console.error('Error fetching course:', error);
+        return null;
+    }
+}

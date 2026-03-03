@@ -1,0 +1,99 @@
+.quiz {
+    margin-top: 3rem;
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+}
+
+.title {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.questionList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.questionCard {
+    padding: 1.5rem;
+}
+
+.questionText {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.radio {
+    accent-color: var(--primary);
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.optionText {
+    font-size: 1rem;
+}
+
+.incorrect {
+    color: var(--destructive);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.result {
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--muted);
+    border-radius: var(--radius);
+}
+
+.passText {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.failText {
+    color: var(--destructive);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.passMessage {
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.failContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.failMessage {
+    margin-bottom: 0.5rem;
+}

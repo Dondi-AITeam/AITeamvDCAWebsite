@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.sidebar {
+    width: 300px;
+    border-right: 1px solid var(--border);
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+.header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.backLink {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.backLink:hover {
+    color: var(--foreground);
+}
+
+.courseTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.nav {
+    padding: 1.5rem;
+}
+
+.module {
+    margin-bottom: 1.5rem;
+}
+
+.moduleTitle {
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--muted-foreground);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.lessonList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lessonLink {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--foreground);
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+}
+
+.lessonLink:hover {
+    background: var(--muted);
+}
+
+.main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+}
